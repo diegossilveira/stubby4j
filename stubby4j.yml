@@ -1,0 +1,22 @@
+- description: Welcome Endpoint
+  uuid: fdkfsd8f8ds7f
+  request:
+    url: /hello-world
+    method: GET
+  response:
+    status: 200
+    headers:
+      content-type: text/plain
+    body: Hello World
+
+- description: Welcome Endpoint
+  uuid: asj3rhbd12fjt
+  request:
+    url: /hello-world/(.+)
+    method: GET
+  response:
+    status: 200
+    headers:
+      content-type: text/plain
+    body: Hello World, <% url.1 %>
+  
